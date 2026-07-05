@@ -33,18 +33,18 @@ The technical framework governing spatial distance extraction has transitioned f
 
 Depth Estimation methodologies are strictly categorized based on the sensor hardware profiles and mathematical constraints used to calculate the spatial matrix.
 
-### A. Stereo Depth Estimation (Multi-View Triangulation)
-*   **Mechanism:** Ingests two or more synchronized, parallel camera views concurrently. The model maps corresponding keypoints across frames, calculating a localized pixel disparity vector ($d$) to derive true absolute physical depth ($Z = \frac{f \cdot B}{d}$, where $f$ represents focal length and $B$ tracks the baseline inter-camera distance).
-*   **Pros:** Outputs absolute, mathematically exact physical metrics, making it a reliable engine for hard manufacturing metrology.
+- ### A. Stereo Depth Estimation (Multi-View Triangulation)
+	*   **Mechanism:** Ingests two or more synchronized, parallel camera views concurrently. The model maps corresponding keypoints across frames, calculating a localized pixel disparity vector ($d$) to derive true absolute physical depth ($Z = \frac{f \cdot B}{d}$, where $f$ represents focal length and $B$ tracks the baseline inter-camera distance).
+	*   **Pros:** Outputs absolute, mathematically exact physical metrics, making it a reliable engine for hard manufacturing metrology.
 
-### B. Monocular Depth Estimation (Single-Frame Inference)
-*   **Mechanism:** Ingests a single, isolated visual canvas. The model lacks geometric triangulation lanes, relying entirely on semantic understanding and internalized world priors (such as perspective lines, vanishing points, known object proportions, shadows, and occlusions) to deduce distance.
-*   **Sub-Variants:**
-    1.  *Relative Depth:* Predicts a smooth ordinal scale map indicating strictly which items are closer or further relative to each other.
-    2.  *Metric Depth:* Predicts absolute, real-world distance metrics (e.g., meters) from a single frame by anchoring scale vectors via sensor priors.
+- ### B. Monocular Depth Estimation (Single-Frame Inference)
+	*   **Mechanism:** Ingests a single, isolated visual canvas. The model lacks geometric triangulation lanes, relying entirely on semantic understanding and internalized world priors (such as perspective lines, vanishing points, known object proportions, shadows, and occlusions) to deduce distance.
+	*   **Sub-Variants:**
+	    1.  *Relative Depth:* Predicts a smooth ordinal scale map indicating strictly which items are closer or further relative to each other.
+	    2.  *Metric Depth:* Predicts absolute, real-world distance metrics (e.g., meters) from a single frame by anchoring scale vectors via sensor priors.
 
-### C. Active-Sensor Fusion Models (RGB-D Infrastructure)
-*   **Mechanism:** Merges standard RGB image pixels with active structural arrays emitted by time-of-flight (ToF), structured light, or LiDAR sensors, running lateral dense skip connections to align blurred, sparse depth points with sharp, high-resolution visual borders.
+- ### C. Active-Sensor Fusion Models (RGB-D Infrastructure)
+	*   **Mechanism:** Merges standard RGB image pixels with active structural arrays emitted by time-of-flight (ToF), structured light, or LiDAR sensors, running lateral dense skip connections to align blurred, sparse depth points with sharp, high-resolution visual borders.
 
 ---
 
