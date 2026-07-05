@@ -1,5 +1,9 @@
-# Awesome-Depth-Estimation
-## Depth Estimation in AI: History, Progression, Variants, & Applications
+# 🌊 Awesome-Depth-Estimation
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Depth Estimation Banner" width="800">
+</p>
+## 🤖 Depth Estimation in AI: History, Progression, Variants, & Applications
 
 **Depth Estimation** is a foundational computer vision paradigm designed to calculate, predict, and reconstruct the absolute or relative 3D distance of spatial objects relative to a camera sensor coordinate frame. In computer vision infrastructure, extracting depth turns flat, ambiguous 2D visual pixel arrays into rich, actionable geometric 3D models. 
 
@@ -7,7 +11,7 @@ Over its development, depth estimation has transitioned from traditional, hand-c
 
 ---
 
-## 1. The Macro Chronological Evolution
+## ⏳ 1. The Macro Chronological Evolution
 
 The technical framework governing spatial distance extraction has transitioned from rigid multi-camera matching math to deep single-frame regressions and unified generative token-space simulators.
 
@@ -28,7 +32,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Data-Space Variants
+## 🛠️ 2. Core Functional & Data-Space Variants
 
 Depth Estimation methodologies are strictly categorized based on the sensor hardware profiles and mathematical constraints used to calculate the spatial matrix.
 
@@ -40,7 +44,7 @@ Depth Estimation methodologies are strictly categorized based on the sensor hard
 
 ---
 
-## 3. The Spatio-Temporal Depth Extraction Matrix
+## 🧩 3. The Spatio-Temporal Depth Extraction Matrix
 
 To route and compile multi-frame spatial boundaries cleanly without triggering execution stalls, modern autonomous pipelines pass visual patches through synchronized cross-attention blocks.
 
@@ -75,7 +79,7 @@ H --> I["Metric Depth Prediction"]
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🚧 4. Production Engineering Challenges & Hardware Solutions
 
 Deploying high-frequency deep depth estimation models across real-world automotive or edge robotic chipsets introduces severe computational and latency bottlenecks.
 
@@ -86,7 +90,7 @@ Deploying high-frequency deep depth estimation models across real-world automoti
 
 ---
 
-## 5. Frontier Real-World AI Industrial Applications
+## 🏭 5. Frontier Real-World AI Industrial Applications
 
 | Application | Details | Year First Used | Paper Link |
 | :--- | :--- | :--- | :--- |
@@ -96,7 +100,7 @@ Deploying high-frequency deep depth estimation models across real-world automoti
 
 ---
 
-## References
+## 📚 References
 1. Eigen, D., Puhrsch, C., & Fergus, R. (2014). Depth map prediction from a single image using a multi-scale deep network. *Advances in Neural Information Processing Systems (NeurIPS)*, 27, 2366-2374 [INDEX: 1].
 2. Long, J., Shelhamer, E., & Darrell, T. (2015). Fully convolutional networks for semantic segmentation: Lateral spatial skip alignments. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)* [INDEX: 1].
 3. Godard, C., Aodha, O. M., & Brostow, G. J. (2017). Unsupervised monocular depth estimation with left-right consistency. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 270-279.
