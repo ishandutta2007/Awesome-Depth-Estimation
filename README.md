@@ -3,6 +3,12 @@
 <p align="center">
   <img src="assets/banner.svg" alt="Awesome Depth Estimation Banner" width="800">
 </p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a> <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
+
+**Keywords**: *Depth Estimation, Computer Vision, Artificial Intelligence, Machine Learning, Deep Learning, Monocular Depth, Stereo Vision, Autonomous Vehicles, Robotics, Spatio-Temporal Vision, Foundation Models, ViT*
 ## 🤖 Depth Estimation in AI: History, Progression, Variants, & Applications
 
 **Depth Estimation** is a foundational computer vision paradigm designed to calculate, predict, and reconstruct the absolute or relative 3D distance of spatial objects relative to a camera sensor coordinate frame. In computer vision infrastructure, extracting depth turns flat, ambiguous 2D visual pixel arrays into rich, actionable geometric 3D models. 
