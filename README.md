@@ -12,7 +12,11 @@ Over its development, depth estimation has transitioned from traditional, hand-c
 The technical framework governing spatial distance extraction has transitioned from rigid multi-camera matching math to deep single-frame regressions and unified generative token-space simulators.
 
 ```mermaid
-[Traditional Epipolar Stereopsis] ───> [Supervised Fully Convolutional (FCN, 2015)] ───> [Self-Supervised Monocular Loops (2017)] ───> [Unified Generative VLMs (Modern Era)](Rigid Multi-Camera Pixel Matching)        (Dense Local Multi-Scale Regressions)           (Geometric Photo-Consistency Wrappers)       (Zero-Shot Foundation Patch Simulators)
+flowchart LR
+    A["Traditional Stereo Vision<br/>(Classical Epipolar Geometry)"]
+    --> B["Supervised FCN-Based Depth (2015)<br/>(Dense CNN Depth Regression)"]
+    --> C["Self-Supervised Monocular Depth (2017)<br/>(Photometric Consistency Learning)"]
+    --> D["Foundation Vision-Language Models (Modern Era)<br/>(Zero-Shot Geometric Reasoning)"]
 ```
 
 *   **The Traditional Epipolar & Stereopsis Era (Classic Computer Vision Baseline)**
@@ -54,7 +58,26 @@ To route and compile multi-frame spatial boundaries cleanly without triggering e
 
 
 ```mermaid
-Spatio-Temporal Ego-Motion Depth Graph[Continuous Frame t] ───> [Vision Transformer (ViT)] ───> [Spatial Latent Patch Maps] ──┐├──> [Photo-Consistency Loss Engine][Target Frame t+1] ───> [Ego-Motion Pose Network] ─────> [Relative Rotation/Translation] ─┘│▼[Zero-Shot Metric Prediction] <─── [Inverse Spatial Differentiable Warping Check]
+flowchart TB
+
+subgraph V["Appearance Stream"]
+    A["Continuous Frame t"]
+    --> B["Vision Transformer (ViT)"]
+    --> C["Spatial Latent Patch Maps"]
+end
+
+subgraph P["Motion Stream"]
+    D["Target Frame t+1"]
+    --> E["Ego-Motion Pose Network"]
+    --> F["Relative Rotation / Translation"]
+end
+
+C --> G["Photometric Consistency Loss"]
+F --> G
+
+G --> H["Inverse Differentiable Warping"]
+
+H --> I["Metric Depth Prediction"]
 ```
 
 *   **Differentiable Inverse Warping Layers**
